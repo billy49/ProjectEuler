@@ -1,0 +1,27 @@
+
+#The prime factors of 13195 are 5, 7, 13 and 29.
+
+# What is the largest prime factor of the number 600851475143 ?
+
+
+def test(n):
+    """ Returns  a list of primes < n """
+    sieve = [True] * n
+    for i in range(3,int(n**0.5)+1,2):
+        if sieve[i]:
+            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
+    return [2] + [i for i in range(3,n,2) if sieve[i]]
+
+
+a = test(int(600851475143**0.5))
+
+for i in a:
+    if 600851475143 % i == 0:
+        print(i)
+        
+        
+        
+# 71
+# 839
+# 1471
+# 6857
