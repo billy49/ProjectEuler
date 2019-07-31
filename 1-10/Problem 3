@@ -4,7 +4,7 @@
 # What is the largest prime factor of the number 600851475143 ?
 
  
-def test(n):
+def primes(n):
     """ Returns  a list of primes < n """
     sieve = [True] * n
     for i in range(3,int(n**0.5)+1,2):
@@ -13,7 +13,7 @@ def test(n):
     return [2] + [i for i in range(3,n,2) if sieve[i]]
 
 
-a = test(int(600851475143**0.5))
+a = primes(int(600851475143**0.5))
 
 for i in a:
     if 600851475143 % i == 0:
