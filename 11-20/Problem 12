@@ -17,11 +17,6 @@
 
 import numpy as np
 
-divisors = 0
-i = 1
-triangle = 0
-
-
 def primes(n):
     """ Returns  a list of primes < n """
     sieve = [True] * n
@@ -46,6 +41,11 @@ def factors(n):
         cutoff = list[j]
     factorized = factorized + 1
     return np.prod(factorized)
+
+
+divisors = 0
+i = 1
+triangle = 0
 
 while divisors < 500:
     triangle = triangle + i
