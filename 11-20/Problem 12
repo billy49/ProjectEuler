@@ -28,7 +28,7 @@ def primes(n):
 list = primes(100000)
 
 def factors(n):
-    #Returns the number of factors of n
+    #Returns the number of factors of n, given a list of primes
     cutoff = 0
     j = 0
     factorized = np.zeros(int(n**0.5)+1)
